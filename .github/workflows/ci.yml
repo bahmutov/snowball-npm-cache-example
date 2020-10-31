@@ -20,10 +20,10 @@ jobs:
             ${{ runner.os }}-
 
       - name: Print cached NPM modules
-        run: ls -la ~/.npm
+        run: npx npm-cache-list all
 
       - name: Install
         run: npm ci
 
       - name: Print NPM modules after install
-        run: ls -la ~/.npm
+        run: npx npm-cache-list all
