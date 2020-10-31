@@ -18,5 +18,12 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
+      - name: Print cached NPM modules
+        run: ls -la ~/.npm
+
       - name: Install
         run: npm ci
+
+      - name: Print NPM modules after install
+        run: ls -la ~/.npm
