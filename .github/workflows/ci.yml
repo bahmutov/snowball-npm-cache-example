@@ -19,15 +19,11 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Print cached NPM modules
-        run: |
-          npx --cache ~/.npm2 npm-cache-list all
-          npm ls -laR ~/.npm
+      - name: Print cached NPM modules size
+        run: du -d 0 ~/.npm
 
       - name: Install
         run: npm ci
 
       - name: Print NPM modules after install
-        run: |
-          npx --cache ~/.npm2 npm-cache-list all
-          npm ls -laR ~/.npm
+        run: du -d 0 ~/.npm
