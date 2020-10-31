@@ -20,9 +20,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Print cached NPM modules size
-        run: |
-          du --help
-          du -d -h 0 ~/.npm
+        run: du -d 0 -h ~/.npm
 
       - name: Install
         run: npm ci
