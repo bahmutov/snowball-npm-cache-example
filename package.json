@@ -18,6 +18,8 @@
     "url": "https://github.com/bahmutov/snowball-npm-cache-example/issues"
   },
   "homepage": "https://github.com/bahmutov/snowball-npm-cache-example#readme",
-  "dependencies": {},
+  "dependencies": {
+    "morgan": "1.10.0"
+  },
   "devDependencies": {}
 }
