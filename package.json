@@ -1,0 +1,21 @@
+{
+  "name": "snowball-npm-cache-example",
+  "version": "1.0.0",
+  "description": "Example of NPM cache snowballing on CI due to lax restore keys",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/snowball-npm-cache-example.git"
+  },
+  "keywords": [],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahmutov/snowball-npm-cache-example/issues"
+  },
+  "homepage": "https://github.com/bahmutov/snowball-npm-cache-example#readme"
+}
