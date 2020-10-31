@@ -7,19 +7,7 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v2
 
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules-v3
-        with:
-          path: '~/.npm'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Print cached NPM modules size
-        run: du -d 0 -h ~/.npm || true
-
-      - name: Install
-        run: npm ci
+      - uses: bahmutov/npm-install@v1
 
       - name: Print NPM modules after install
         run: du -d 0 -h ~/.npm || true
